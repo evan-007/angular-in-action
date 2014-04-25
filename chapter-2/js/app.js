@@ -98,24 +98,29 @@ myModule.controller('MainCtrl', function($scope, angelloModel, angelloHelper) {
 
 		$scope.currentStatus = $scope.statusesIndex[story.status];
 		$scope.currentType = $scope.typesIndex[story.type];
-	}
+	};
 
 	$scope.setCurrentStatus = function(status) {
 		if(typeof $scope.currentStory !== 'undefined') {
-			$scope.setCurrentStory.status = status.name;
+			$scope.currentStory.status = status.name;
 		}
 	};
 
 	$scope.setCurrentType = function(type) {
 		if(typeof $scope.currentStory !== 'undefined') {
-			$scope.setCurrentStory.type = type.name;
+			$scope.currentStory.type = type.name;
 		}
 	};
 
 	$scope.createStory = function () {
 		$scope.stories.push({
 			title: 'New Story',
-			description: 'Description pending.'
+			description: 'Description pending.',
+			criteria: 'Criteria pending',
+			status: 'Backlog',
+			type: 'Feature',
+			reporter: 'pending',
+			assignee: 'pending'
 		});
 	};
 });
