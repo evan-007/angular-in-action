@@ -3,9 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 		<script type="text/javascript" src= "js/app.js"></script>
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -22,6 +24,7 @@
 							</div>
 						</div>
 					</div><!--col-->
+					<!--form-->
 					<div class="col-md-6">
 						<h2>Story</h2>
 						<form class="form-horizontal">
@@ -37,7 +40,29 @@
 									<textarea class="form-control" id="inputDescription" placeholder="Description" rows="3" ng-model="currentStory.description"></textarea>
 								</div>
 							</div>
+							<div class="control-group">
+								<label class="control-label" for="inputAcceptance">Acceptance Criteria</label>
+								<div class="controls">
+									<textarea class="form-control" id="inputAcceptance" placeholder="Acceptance Criteria" rows="3" ng-model="currentStory.criteria"></textarea>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="inputReporter">Reporter</label>
+								<div class="controls">
+									<textarea class="form-control" id="inputReporter" placeholder="Reporter" rows="3" ng-model="currentStory.reporter"></textarea>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="inputAssignee">Assignee</label>
+								<div class="controls">
+									<textarea class="form-control" id="inputAssignee" placeholder="Assignee" rows="3" ng-model="currentStory.assignee"></textarea>
+								</div>
+							</div>
 						</form>
+						<br>
+						<a class="btn btn-primary pull-right" ng-click="createStory()">
+							<i class="fa fa-plus"></i>
+						</a>
 					</div><!--col-->
 				</div><!--controller-->
 			</div><!--row-->
