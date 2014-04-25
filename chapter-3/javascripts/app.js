@@ -7,7 +7,7 @@ myModule.factory('angelloHelper', function($rootScope) {
 		for (var i = 0, len = source.length; i < len; i++) {
 			tempArray[source[i][property]] = source[i];
 		}
-
+		
 		return tempArray;
 	};
 
