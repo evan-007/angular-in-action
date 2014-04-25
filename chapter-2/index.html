@@ -28,12 +28,30 @@
 					<div class="col-md-6">
 						<h2>Story</h2>
 						<form class="form-horizontal">
+
 							<div class="control-group">
 								<label class="control-label" for="inputTitle">Title</label>
 								<div class="controls">
 									<input type="text" class="form-control" placeholder="Title" ng-model="currentStory.title">
 								</div>
 							</div>
+
+							<div class="control-group">
+								<label="control-label" for="inputStatus"></label>
+								<div class="controls">
+									<select id="inputStatus" class="form-control" ng-model="currentStatus" ng-options="s.name for s in statuses"
+									ng-change="setCurrentStatus(currentStatus)"></select>
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label="control-label" for="inputType"></label>
+								<div class="controls">
+									<select id="inputType" class="form-control" ng-model="currentType" ng-options="t.name for t in types"
+									ng-change="setCurrentType(currentType)"></select>
+								</div>
+							</div>
+
 							<div class="control-group">
 								<label class="control-label" for="inputDescription">Description</label>
 								<div class="controls">
